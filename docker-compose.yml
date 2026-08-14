@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  awesome_okapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: awesome_okapi_v2
+    hostname: awesome-okapi
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    volumes:
+      - ./data:/app/.awesome_okapi_v2
+      - ./reports:/app/awesome_okapi_v2_reports
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /proc:/proc
+    environment:
+      - PYTHONUNBUFFERED=1
+      - CONFIG_DIR=/app/.awesome_okapi_v2
+      - DATABASE_FILE=/app/.awesome_okapi_v2/awesome_okapi_v2.db
+      - LOG_FILE=/app/.awesome_okapi_v2/awesome_okapi_v2.log
+    ports:
+      - "5000:5000"
+      - "8080:8080"
+      - "8000-9000:8000-9000"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+      - SYS_PTRACE
+      - IPC_LOCK
+    security_opt:
+      - apparmor:unconfined
+    tmpfs:
+      - /tmp
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536

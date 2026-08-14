@@ -1,0 +1,77 @@
+# Makefile for AWESOME_OKAPI_V2
+
+.PHONY: help install test run docker-build docker-run docker-compose clean format lint
+
+# Variables
+PYTHON = python3
+DOCKER_IMAGE = awesome_okapi_v2
+DOCKER_TAG = latest
+
+help:
+	@echo "🦒 AWESOME_OKAPI_V2 Makefile"
+	@echo ""
+	@echo "  make install         - Install dependencies"
+	@echo "  make test            - Run tests"
+	@echo "  make run             - Run the application"
+	@echo "  make docker-build    - Build Docker image"
+	@echo "  make docker-run      - Run Docker container"
+	@echo "  make docker-compose  - Run with Docker Compose"
+	@echo "  make clean           - Clean temporary files"
+	@echo "  make format          - Format code with black"
+	@echo "  make lint            - Lint code with flake8"
+
+install:
+	@echo "📦 Installing dependencies..."
+	@pip install -r requirements.txt
+	@echo "✅ Installation complete!"
+
+test:
+	@echo "🧪 Running tests..."
+	@$(PYTHON) -m pytest test.py -v --cov=. --cov-report=term
+	@echo "✅ Tests complete!"
+
+run:
+	@echo "🚀 Running AWESOME_OKAPI_V2..."
+	@$(PYTHON) awesome_okapi_v2.py
+
+docker-build:
+	@echo "🐳 Building Docker image..."
+	@docker build -t $(DOCKER_IMAGE):$(DOCKER_TAG) .
+	@echo "✅ Build complete!"
+
+docker-run:
+	@echo "🐳 Running Docker container..."
+	@docker run -it --rm \
+		--network host \
+		--privileged \
+		-v $(PWD)/data:/app/.awesome_okapi_v2 \
+		-v $(PWD)/reports:/app/awesome_okapi_v2_reports \
+		$(DOCKER_IMAGE):$(DOCKER_TAG)
+
+docker-compose:
+	@echo "🐳 Starting with Docker Compose..."
+	@docker-compose up -d
+	@echo "✅ Services started!"
+
+clean:
+	@echo "🧹 Cleaning temporary files..."
+	@find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+	@find . -type f -name "*.pyc" -delete 2>/dev/null || true
+	@find . -type f -name ".coverage" -delete 2>/dev/null || true
+	@find . -type d -name "htmlcov" -exec rm -rf {} + 2>/dev/null || true
+	@find . -type d -name ".pytest_cache" -exec rm -rf {} + 2>/dev/null || true
+	@find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
+	@echo "✅ Clean complete!"
+
+format:
+	@echo "🎨 Formatting code..."
+	@$(PYTHON) -m black awesome_okapi_v2.py test.py
+	@echo "✅ Format complete!"
+
+lint:
+	@echo "🔍 Linting code..."
+	@$(PYTHON) -m flake8 awesome_okapi_v2.py test.py --max-line-length=120
+	@echo "✅ Lint complete!"
+
+all: install format lint test
+	@echo "✅ All tasks complete!"
