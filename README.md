@@ -8,7 +8,7 @@ Awesome Okapi_v2 is intended exclusively for systems, applications, networks, ac
 
 The platform can integrate with isolated testing environments and approved security tools. Commands can be submitted through supported communication channels and routed to an authorized execution environment where policy checks are performed before an operation is executed. Results can then be returned to the appropriate channel or displayed through the web dashboard.
 
-Multi-Channel Command Interface
+# Multi-Channel Command Interface
 
 One of the major features of Awesome Okapi_v2 is its multi-channel command interface.
 
@@ -30,7 +30,7 @@ How the operation should be logged.
 
 This architecture helps prevent a communication account from becoming an unrestricted remote shell.
 
-Discord Integration
+# Discord Integration
 
 The Discord integration can provide a controlled interface for authorized penetration-testing teams and cybersecurity laboratories.
 
@@ -74,7 +74,7 @@ Tester identity.
 
 This approach makes results easier to review and reduces accidental disclosure of sensitive information.
 
-Google Chat Integration
+# Google Chat Integration
 
 Google Chat can provide another collaboration interface for authorized security teams.
 
@@ -94,7 +94,7 @@ Because messaging platforms can be compromised, the platform should treat every 
 
 Sensitive results should preferably be returned through the secure web dashboard rather than directly exposing confidential information in a messaging conversation.
 
-Signal Integration
+# Signal Integration
 
 Signal can provide a communication interface for authorized security teams that require secure messaging.
 
@@ -102,7 +102,7 @@ Awesome Okapi_v2 can use the Signal integration for controlled operational notif
 
 The platform should still enforce centralized authentication, authorization, audit logging, and scope validation because encrypted communications do not automatically make an operation authorized.
 
-Web Application
+# Web Application
 
 The web application serves as the central management interface for Awesome Okapi_v2.
 
