@@ -42,7 +42,7 @@ For example, a trainee may only be allowed to run reconnaissance exercises again
 
 Every request should be associated with the user's Discord identity and recorded in the platform audit system.
 
-Telegram Integration
+# Telegram Integration
 
 The Telegram integration provides another controlled interface for security teams.
 
