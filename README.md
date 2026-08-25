@@ -52,7 +52,7 @@ Telegram commands should not automatically translate into unrestricted operating
 
 This design allows administrators to disable dangerous operations, restrict commands to specific projects, and require additional approval for sensitive activities.
 
-Slack Integration
+# Slack Integration
 
 Slack integration allows Awesome Okapi_v2 to operate inside organizational security workflows.
 
@@ -84,7 +84,7 @@ Google Workspace administrators can restrict which spaces and users are permitte
 
 The integration should use secure authentication mechanisms and should never rely solely on a username or display name as proof of authorization.
 
-WhatsApp Integration
+# WhatsApp Integration
 
 Awesome Okapi_v2 can support WhatsApp-based interaction where an organization has an approved business integration and appropriate authorization.
 
