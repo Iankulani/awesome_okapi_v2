@@ -110,7 +110,7 @@ Administrators and authorized security professionals can use the dashboard to cr
 
 The web application can contain sections such as:
 
-Dashboard
+# Dashboard
 
 The dashboard provides a high-level overview of current security activities.
 
