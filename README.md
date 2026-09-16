@@ -622,6 +622,7 @@ Awesome Okapi_v2 — Authorized testing. Controlled execution. Measurable securi
 git clone https://github.com/Iankulani/awesome_okapi_v2.git
 cd awesome_okapi_v2
 ```
+
 # How to run
 ```bash
 python awesome_okapi_v2.py
@@ -632,4 +633,5 @@ python awesome_okapi_v2.py
 ```
 
 # Star History
-```bash
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Iankulani/awesome_okapi_v2&type=Date)](https://star-history.com/#Iankulani/awesome_okapi_v2&Date)
