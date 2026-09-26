@@ -1,5 +1,10 @@
 # awesome_okapi_v2
 
+
+
+<img width="360" height="360" alt="okapi1" src="https://github.com/user-attachments/assets/79756a04-84ca-4e02-a6b3-516227e92ade" />
+
+
 Awesome Okapi_v2 is a cybersecurity penetration-testing and security-operations platform designed to help authorized security professionals, penetration testers, red teams, blue teams, security researchers, and organizations evaluate the security of their digital environments. The platform provides a centralized command-and-control interface through which authorized operators can interact with approved testing infrastructure using communication channels such as Discord, Telegram, Slack, Google Chat, WhatsApp, Signal, and a dedicated web application.
 
 The primary objective of Awesome Okapi_v2 is to simplify authorized security testing while maintaining strong controls around authentication, authorization, auditing, scope management, and operational safety. Instead of requiring security teams to continuously switch between communication platforms, terminals, dashboards, and testing environments, the platform provides a unified interface for submitting approved security-testing commands and receiving structured results.
