@@ -147,19 +147,19 @@ Project Management
 
 Each penetration-testing project can have its own scope, users, permissions, credentials, testing environments, and reporting configuration.
 
-A project can define authorized targets such as:
+# A project can define authorized targets such as:
 
-Internal laboratory networks.
-Test web applications.
-Approved domains.
-Cloud test environments.
-Virtual machines.
-Containers.
-Development systems.
+* Internal laboratory networks.
+* Test web applications.
+* Approved domains.
+* Cloud test environments.
+* Virtual machines.
+* Containers.
+* Development systems.
 
 The platform should prevent operations against targets that are outside the configured scope.
 
-Controlled Command Execution
+# Controlled Command Execution
 
 Awesome Okapi_v2 can provide command execution capabilities for authorized penetration-testing environments.
 
@@ -167,7 +167,7 @@ However, commands should be handled through a controlled execution architecture.
 
 Instead of allowing arbitrary commands from a chat message to execute directly on a production server, the platform can use an allowlisted command registry.
 
-Each command can contain:
+# Each command can contain:
 
 Command name.
 Description.
@@ -209,7 +209,7 @@ Approval Workflow
 
 Sensitive operations can require approval from another authorized user.
 
-For example:
+# For example:
 
 Tester creates a task.
 Awesome Okapi_v2 validates the requested target.
@@ -222,7 +222,7 @@ An audit event records the complete process.
 
 This workflow supports separation of duties and reduces the risk of accidental execution.
 
-Phishing Simulation
+# Phishing Simulation
 
 Awesome Okapi_v2 can include a phishing-awareness simulation module for authorized security-awareness programs.
 
